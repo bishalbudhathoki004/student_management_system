@@ -21,7 +21,6 @@ $activePage = $activePage ?? '';
     <a class="sidebar-link <?php echo $activePage === 'dashboard' ? 'active' : ''; ?>" href="dashboard.php">Dashboard</a>
     <a class="sidebar-link <?php echo $activePage === 'add_student' ? 'active' : ''; ?>" href="add_student.php">Add Student</a>
     <a class="sidebar-link <?php echo $activePage === 'manage_students' ? 'active' : ''; ?>" href="manage_students.php">Manage Students</a>
-    <a class="sidebar-link <?php echo $activePage === 'student_list' ? 'active' : ''; ?>" href="student_list.php">Student List</a>
     <a class="sidebar-link sidebar-logout" href="../logout.php">Logout</a>
 </aside>
 <div class="overlay" id="sidebarOverlay"></div>

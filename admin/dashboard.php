@@ -1260,14 +1260,6 @@ $bsccsit_percentage = $total_students > 0
     </a>
 
 
-    <a
-        href="student_list.php"
-        class="sidebar-link"
-    >
-        Student List
-    </a>
-
-
     <div class="sidebar-bottom">
 
         <a
