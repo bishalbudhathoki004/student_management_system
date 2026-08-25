@@ -5,10 +5,23 @@ $username = "root";
 $password = "";
 $database = "student_management_system";
 
-$conn = new mysqli($host, $username, $password, $database);
+function get_db_connection(): mysqli
+{
+    static $connection = null;
 
-if ($conn->connect_error) {
-    die("Database connection failed: " . $conn->connect_error);
+    global $host, $username, $password, $database;
+
+    if ($connection instanceof mysqli) {
+        return $connection;
+    }
+
+    $connection = new mysqli($host, $username, $password, $database);
+
+    if ($connection->connect_error) {
+        die("Database connection failed: " . $connection->connect_error);
+    }
+
+    return $connection;
 }
 
-?>
+$conn = get_db_connection();
